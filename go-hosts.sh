@@ -19,6 +19,7 @@ case "$1" in
 		cat hosts >> /etc/hosts
 		curl -O https://raw.githubusercontent.com/Lerist/Go-Hosts/master/hosts-ad -k
 		cat hosts-ad >> /etc/hosts
+		/etc/init.d/dnsmasq restart 
 		echo Successful
 		exit 0
 	else
@@ -28,6 +29,7 @@ case "$1" in
 		cat hosts >> /etc/hosts
 		curl -O https://raw.githubusercontent.com/Lerist/Go-Hosts/master/hosts-ad -k
 		cat hosts-ad >> /etc/hosts
+		/etc/init.d/dnsmasq restart 
 		echo Successful
 		exit 0
 	fi
@@ -39,6 +41,7 @@ case "$1" in
 		rm hosts*
 		curl -O https://raw.githubusercontent.com/Lerist/Go-Hosts/master/hosts -k
 		cat hosts >> /etc/hosts
+		/etc/init.d/dnsmasq restart 
 		echo Successful
 		exit 0
 	else
@@ -46,6 +49,7 @@ case "$1" in
 		rm hosts*
 		curl -O https://raw.githubusercontent.com/Lerist/Go-Hosts/master/hosts -k
 		cat hosts >> /etc/hosts
+		/etc/init.d/dnsmasq restart 
 		echo Successful
 		exit 0
 	fi
@@ -58,6 +62,7 @@ case "$1" in
 	if [ -f /etc/hosts.bak ]
 	then
 		cat /etc/hosts.bak > /etc/hosts
+		/etc/init.d/dnsmasq restart 
 		exit 0
 	else
 		echo "Can't find the backup file."

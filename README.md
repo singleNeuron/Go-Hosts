@@ -1,3 +1,12 @@
+##增加路由器配置脚本
+我编写了一个shell脚本，让它可以在Linus内核的路由器上被自动配置和更新。仅使用小米路由R3进行测试。
+使用下面的命令来配置它
+
+        curl -O https://raw.githubusercontent.com/singleNeuron/Go-Hosts/master/go-hosts.sh -k
+        chmod a+x go-hosts.sh
+        ./go-hosts.sh
+
+
 ## Support site
 *Google, Google Play, YouTube, Gamil, Facebook, Twitter, Instagram, Tumblr, Wikipedia, Yahoo, Telegram(WEB), Dropbox, Flipboard, Mage, Line, Pinterest, W3schools, Ingress, Twitch, SoundCloud, Xboxlive, WordPress, Tapatalk, Kobo, Vimeo, Nytimes, Issuu, Tor, DuckDuckGo, Imgur, Pcbeta ...*
 
